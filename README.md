@@ -32,7 +32,7 @@ A simple conversational web application built with Node.js and Express, integrat
 ----------
 
 ## Demo
-
+![Dashboard](image.png "Dashboard")
 _Add a link to a live demo [TBD]._
 
 ----------
