@@ -1,0 +1,67 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Include Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Include DOMPurify -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+
+    <!-- Include Highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>New GPT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="chat-app">
+      <!-- Sidebar for chat sessions -->
+      <aside id="chat-sidebar">
+        <button id="new-chat-button">New Chat</button>
+        <h2>Previous Chats</h2>
+        <ul id="chat-list"></ul>
+      </aside>
+
+      <!-- Main chat area -->
+      <div id="chat">
+        <!-- Header -->
+        <header id="chat-header">
+          <h1>New GPT</h1>
+          <div id="model-selection">
+            <label for="model-select">Model:</label>
+            <select id="model-select">
+              <option value="gpt-3.5-turbo" selected>GPT-3.5 Turbo</option>
+              <option value="gpt-4">GPT-4</option>
+              <!-- Add more models as desired -->
+            </select>
+          </div>
+        </header>
+
+        <!-- Messages area -->
+        <div id="messages"></div>
+
+        <!-- Input form -->
+        <form id="chat-form">
+          <input
+            type="text"
+            id="user-input"
+            autocomplete="off"
+            placeholder="Type your message here..."
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
